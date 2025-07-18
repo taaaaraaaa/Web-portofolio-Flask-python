@@ -1,0 +1,90 @@
+    <!-- templates/index.html -->
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genta Ramadhan - Web Portofolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <header>
+        <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Genta<span>Ramadhan</span></h1>
+            <ul class="nav-links">
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+        </nav>
+        <section class="hero">
+        <div class="container">
+            <h2>Halo, Saya Genta 👋</h2>
+            <p>Web Developer • Android Developer • UI/UX Designer</p>
+            <a href="#projects" class="btn">Lihat Proyek</a>
+        </div>
+        </section>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah pengembang web dan aplikasi Android dengan fokus pada desain antarmuka yang intuitif dan pengalaman pengguna yang menarik.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section gray">
+        <div class="container">
+        <h2>Skill</h2>
+        <ul class="skills">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python (Flask)</li>
+            <li>Android Java</li>
+            <li>UI/UX Design</li>
+        </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+        <h2>Proyek Saya</h2>
+        <div class="projects">
+            <div class="project-card">
+            <img src="{{ url_for('static', filename='img/project1.png') }}" alt="Proyek 1">
+            <h3>Aplikasi Android</h3>
+            <p>Aplikasi edukasi dengan integrasi sensor dan AI.</p>
+            </div>
+            <div class="project-card">
+            <img src="{{ url_for('static', filename='img/project2.png') }}" alt="Proyek 2">
+            <h3>Website Portofolio</h3>
+            <p>Website personal dengan tema gelap dan animasi scroll.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section gray">
+        <div class="container">
+        <h2>Kontak Saya</h2>
+        <form action="/send-message" method="POST" class="contact-form">
+            <input type="text" name="nama" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="pesan" placeholder="Pesan Anda..." required></textarea>
+            <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+        <p>&copy; 2025 Genta Ramadhan. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+    </body>
+    </html>
